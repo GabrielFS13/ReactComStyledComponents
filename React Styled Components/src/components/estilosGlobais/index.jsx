@@ -1,5 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
+import GandhiSansRegular from './GandhiSans-Regular.otf'
+import GandhiSansBold from './GandhiSans-Bold.otf'
+
+
 const EstilosGlobais = createGlobalStyle`
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -10,10 +14,20 @@ const EstilosGlobais = createGlobalStyle`
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@font-face {
+  font-family: "GandhiSansRegular";
+  src: local("Gandhi Sans Regular"), local("GandhiSansRegular"), url(${GandhiSansRegular});
+}
+
+@font-face {
+  font-family: "GandhiSansBold";
+  src: local("Gandhi Sans Bold"), local("GandhiSansBold"), url(${GandhiSansBold});
+}
 
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: GandhiSansRegular
 }
 
 /* Sections
